@@ -10,9 +10,9 @@
 .menu-lateral {
     position: relative;
     height: 100vh;
-    background: #424242;
+    background: #3C3C3B;
     width: 300px;
-    box-shadow: 10px 0 0 #099c22;
+    box-shadow: 10px 0 0 #1B2CC1;
 }
 
 .menu-lateral ul {
@@ -40,6 +40,11 @@
     color: #ffffff;
 }
 
+.menu-lateral ul li a:hover {
+    color: #7692FF;
+    transition: 0.5s;
+} 
+
 .menu-lateral ul li a .icon {
     position: relative;
     display: block;
@@ -65,5 +70,12 @@
 }
 
 .menu-lateral ul li.active {
-    background: #099c22;
+    background: #1B2CC1;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    background: #F1F2F6;
 }
