@@ -11,14 +11,15 @@
         
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         @yield('styles')
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
     </head>
 
     <body>
         @include('layouts.menu-lateral')
 
         @yield('conteudo')
-
-        @yield('scripts')
+        
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>

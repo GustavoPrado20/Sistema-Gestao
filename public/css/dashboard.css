@@ -20,14 +20,51 @@
 
 .card {
     display: flex;
+    flex-direction: column;
     background: #7692ff;
     width: 100%;
     height: 150px;
+    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.titulo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    color: #ffffff;
+}
+
+.titulo-card h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.titulo-card span {
+    font-size: 2.2rem;
+}
+
+.dados-card {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;              
+}
+
+.dados-card p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
 .container-graficos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
     width: 100%;
     background: #ffffff;
     height: 400px;
@@ -37,10 +74,62 @@
 }
 
 .container-last-colaboradores {
+    display: flex;
     width: 100%;
     background: #ffffff;
     height: 300px;
     margin-top: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.grid-opcao {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+.titulo-grafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.dados-grafico {
+    display: grid;
+    width: 100%;
+    height: 50%;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.dados-grafico button {
+    border: none;
+    width: 100%;
+    background: #ffffff;
+    height: 30px;
+    border-radius: 20px;
+    border: 2px solid #7692ff;
+    color: #7692ff;
+    font-size: 1rem;
+    font-weight: 600;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+}
+
+.dados-grafico button:hover {
+    box-shadow: inset 0 0 0 50px #7692ff;
+    color: #fff;    
 }
