@@ -31,5 +31,17 @@
                 
             </section>
         </section>
+
+        <section class="container-graficos">
+            
+        </section>
+
+        <section class="container-last-colaboradores">
+
+        </section>
     </main>
+@endsection
+
+@section('scripts')
+
 @endsection

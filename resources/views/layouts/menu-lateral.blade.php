@@ -37,6 +37,13 @@
 
         <li class="list">
             <a href="#">
+                <span class="icon"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></span>
+                <span class="list">Logs</span>
+            </a>
+        </li>
+
+        <li class="list">
+            <a href="#">
                 <span class="icon"><ion-icon name="enter-outline"></ion-icon></span>
                 <span class="list">Entrar</span>
             </a>

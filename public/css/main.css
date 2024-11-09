@@ -79,3 +79,17 @@ body {
     gap: 15px;
     background: #E7EEF7;
 }
+
+main {
+    display: flex;
+    height: 100vh;
+    width: calc(100% - 300px);
+    padding: 30px;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
