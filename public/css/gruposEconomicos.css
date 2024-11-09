@@ -73,6 +73,50 @@
     font-weight: 500;
 }
 
+.table-head form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background: none;
+    border: 2px solid #7692ff;
+    color: #7692ff;
+    height: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+}
+
+.table-head form input  {
+    border: none;
+    background: none;
+    width: 100%;
+    outline: none;
+    margin-left: 10px;
+    font-size: 1rem;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    color: #7692ff;
+}
+
+.table-head form input::placeholder {
+    color: #7692ff;
+}
+
+.table-head form ion-icon {
+    font-size: 1.2rem;
+}
+
+.table-head form:hover, .table-head form input:hover, .table-head form input:hover::placeholder {
+    box-shadow: inset 0 0 0 50px #7692ff;
+    color: #fff;
+}
+
 .table-body {
     display: grid;
     width: 100%;

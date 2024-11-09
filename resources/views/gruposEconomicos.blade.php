@@ -25,7 +25,10 @@
                 <h3>Bandeiras</h3>
                 <h3>Unidades</h3>
                 <h3>Colaboradores</h3>
-                <input type="text" placeholder="Procurar">
+                <form action="">
+                    <ion-icon name="search"></ion-icon>
+                    <input type="text" placeholder="Procurar">
+                </form>
             </section>
 
             <section class="table-body">
@@ -35,14 +38,14 @@
                 <p>10000</p>
                 <section class="container-end">   
                     <section class="container-edit">
-                        <button class="btn-remove-edit"><ion-icon name="create"></ion-icon></button>
-                        <button class="btn-remove-edit"><ion-icon name="person-remove"></ion-icon></button>
+                        <button class="btn-remove-edit" ><ion-icon name="create"></ion-icon></button>
+                        <button class="btn-remove-edit"><ion-icon name="remove-circle"></ion-icon></button>
                     </section>
 
-                    <section class="container-datas">
+                    {{-- <section class="container-datas">
                         <p>Data Criação: 20/08/2003</p>
                         <p>Ultima Atualização: 20/08/2003</p>
-                    </section>
+                    </section> --}}
                 </section>
             </section>
 
