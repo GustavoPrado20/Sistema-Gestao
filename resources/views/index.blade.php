@@ -94,7 +94,8 @@
                       'rgb(201, 203, 207)'
                     ],
                     borderWidth: 1
-                  }]
+                  }],
+                  
                 },
                 options: {
                   plugins: {
@@ -111,31 +112,49 @@
                     y: {
                       beginAtZero: true
                     }
-                  }
+                  },
                 }
               });
             </script>
           </section>
 
-          <section class="grid-opcao">
-            <section class="titulo-grafico">
-              <h2>Gráficos e Estatísticas</h2>
-            </section>
-
-            <section class="dados-grafico">
-              <button>Grupos Econômicos X Colaboradores</button>
-              <button>Grupos Econômicos X Unidades</button>
-              <button>Grupos Econômicos X Bandeiras</button>
-              <button>Bandeiras X Colaboradores</button>
-              <button>Bandeiras X Unidades</button>
-              <button>Unidades X Colaboradores</button>
-            </section>
+        <section class="grid-opcao">
+          <section class="titulo-grafico">
+            <h2>Gráficos e Estatísticas</h2>
           </section>
+
+          <section class="dados-grafico">
+            <button>Grupos Econômicos X Colaboradores</button>
+            <button>Bandeiras X Unidades</button>
+            <button>Grupos Econômicos X Bandeiras</button>
+            <button>Bandeiras X Colaboradores</button>
+            <button>Grupos Econômicos X Unidades</button>
+            <button>Unidades X Colaboradores</button>
+          </section>
+        </section>
       </section>
 
-      <section class="container-last-colaboradores">
-        
+    <section class="container-last-colaboradores">
+      <header>
+          <h2>Últimos Colaboradores Adicionados</h2>
+      </header>
+
+      <section class="table">
+        <section class="table-head">
+          <h4>Nome</h4>
+          <h4>Email</h4>
+          <h4>Unidade</h4>
+          <h4>Data Adição</h4>
+        </section>
+
+        <section class="grid-colaborador">
+          <p>Gustavo Prado</p>
+          <p>gustavo.henrique.igt@gmail.com</p>
+          <p>Unidade X</p>
+          <p>20/08/2003</p>
+        </section>
       </section>
+    </section>
   </main>
 @endsection
 

@@ -1,5 +1,9 @@
-<nav class="menu-lateral">
-    <ul>
+<nav class="menu-lateral" id="nav">
+    <button id="btn-nav" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+        <span id="hamburguer"></span>
+    </button>
+
+    <ul id="menu" rule = "Menu">
         <li class="list active">
             <a href="#">
                 <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
