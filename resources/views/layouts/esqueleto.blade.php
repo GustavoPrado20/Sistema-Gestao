@@ -11,6 +11,8 @@
         
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
         @yield('styles')
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
     </head>
 
     <body>
