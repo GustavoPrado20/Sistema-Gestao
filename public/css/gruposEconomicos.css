@@ -1,0 +1,283 @@
+.container-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo {
+    display: flex;
+    justify-items: center;
+    gap: 10px;
+}
+
+.titulo span, .titulo h1 {
+    font-size: 2rem;
+}
+
+.btn-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    color: #7692ff;
+    background: none;
+    border: 2px solid #7692ff;
+    border-radius: 20px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #7692ff;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.btn ion-icon {
+    font-size: 1rem;
+}
+
+.btn-animation:hover {
+    box-shadow: inset 0 0 0 50px #7692ff;
+    color: #fff;
+}
+
+.container-grupos {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.table-head {
+    display: grid;
+    width: 100%;
+    background: #F5F6FA;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 20px;
+    height: 70px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table-head h3 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.table-head form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background: none;
+    border: 2px solid #7692ff;
+    color: #7692ff;
+    height: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    cursor: pointer;
+}
+
+.table-head form input  {
+    border: none;
+    background: none;
+    width: 100%;
+    outline: none;
+    margin-left: 10px;
+    font-size: 1rem;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    color: #7692ff;
+}
+
+.table-head form input::placeholder {
+    color: #7692ff;
+}
+
+.table-head form ion-icon {
+    font-size: 1.2rem;
+}
+
+.table-head form:hover, .table-head form input:hover, .table-head form input:hover::placeholder {
+    box-shadow: inset 0 0 0 50px #7692ff;
+    color: #fff;
+}
+
+.table-body {
+    display: grid;
+    width: 100%;
+    background: #fff;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 125px;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container-end {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.container-edit {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+}
+
+.btn-remove-edit {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-remove-edit ion-icon {
+    font-size: 2.2rem;
+}
+
+.btn-remove-edit ion-icon:hover {
+    font-size: 2.3rem;
+}
+
+.container-datas {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.container-datas p {
+    font-size: .8rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    body {
+        overflow: hidden;
+    }
+
+    main {
+        overflow: auto;
+    }
+
+    .table-head h3 {
+        font-size: .8rem;
+    }
+
+    .table-head form input {
+        font-size: .8rem;
+    }
+
+    .table-body {
+        height: 70px;
+    }
+
+    .table-body p {
+        font-size: .7rem;
+    }
+
+    .container-edit ion-icon {
+        font-size: 1.5rem;
+    }
+
+    .container-edit ion-icon:hover {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body{
+        overflow: hidden;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    .table-head h3 {
+        font-size: .8rem;
+    }
+
+    .table-head form input {
+        font-size: .8rem;
+    }
+
+    .table-body p {
+        font-size: .9rem;
+    }
+
+    .container-edit ion-icon {
+        font-size: 1.6rem;
+    }
+
+    .container-edit ion-icon:hover {
+        font-size: 1.8rem;
+    }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        width: 100vw;
+    }
+
+    .titulo h1 {
+        font-size: 1rem;
+    }
+
+    .titulo span {
+        font-size: 1.5rem;
+    }
+
+    .btn-header button {
+        padding: 6px 22px;
+    }
+
+    .table-head h3 {
+        font-size: .5rem;
+    }
+
+    .table-head form {
+        display: none;
+    }
+
+    .table-body {
+        height: 65px;
+    }
+
+    .table-body {
+        font-size: .5rem;
+    }
+
+    .btn-remove-edit ion-icon {
+        font-size: 1.2rem;
+    }
+
+    .btn-remove-edit ion-icon:hover {
+        font-size: 1.3rem;
+    }
+}
