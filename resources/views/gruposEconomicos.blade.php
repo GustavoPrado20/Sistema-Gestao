@@ -41,11 +41,6 @@
                         <button class="btn-remove-edit" ><ion-icon name="create"></ion-icon></button>
                         <button class="btn-remove-edit"><ion-icon name="remove-circle"></ion-icon></button>
                     </section>
-
-                    {{-- <section class="container-datas">
-                        <p>Data Criação: 20/08/2003</p>
-                        <p>Ultima Atualização: 20/08/2003</p>
-                    </section> --}}
                 </section>
             </section>
 

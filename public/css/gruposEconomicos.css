@@ -245,4 +245,39 @@
         width: 100vw;
     }
 
+    .titulo h1 {
+        font-size: 1rem;
+    }
+
+    .titulo span {
+        font-size: 1.5rem;
+    }
+
+    .btn-header button {
+        padding: 6px 22px;
+    }
+
+    .table-head h3 {
+        font-size: .5rem;
+    }
+
+    .table-head form {
+        display: none;
+    }
+
+    .table-body {
+        height: 65px;
+    }
+
+    .table-body {
+        font-size: .5rem;
+    }
+
+    .btn-remove-edit ion-icon {
+        font-size: 1.2rem;
+    }
+
+    .btn-remove-edit ion-icon:hover {
+        font-size: 1.3rem;
+    }
 }
