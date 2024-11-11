@@ -1,7 +1,7 @@
 @extends('layouts.esqueleto')
 
 @section('stylesAndScripts')
-    <link rel="stylesheet" href="{{ asset('css/gruposEconomicos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bandeiras.css') }}">
 @endsection
 
 @section('conteudo')
@@ -9,14 +9,14 @@
         <header>
             <section class="container-header">
                 <section class="titulo">
-                    <span><ion-icon name="layers"></ion-icon></span>
-                    <h1>GRUPOS ECONÔMICOS</h1>
+                    <span><ion-icon name="flag"></ion-icon></span>
+                    <h1>BANDEIRAS</h1>
                 </section>
 
-                @livewire('AddGrupoEconomico')
+                @livewire('AddBandeira')
             </section>
         </header>
 
-        @livewire('GruposEconomicos')
+        @livewire('Bandeiras')
     </main>
 @endsection

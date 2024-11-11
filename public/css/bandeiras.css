@@ -217,16 +217,17 @@
     font-weight: bold;
 }
 
-.modal-add-membro form input {
+.modal-add-membro form input, .modal-add-membro form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid #000;
+    background: none;
 }
 
-.modal-add-membro form input:focus {
+.modal-add-membro form input:focus, .modal-add-membro form select:focus {
     outline: none;
     border-bottom: 3px solid #7692ff;
 }

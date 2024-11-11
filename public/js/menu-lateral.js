@@ -4,6 +4,8 @@ const btnMenu2 = document.getElementById('btn-menu-2');
 const btnMenu3 = document.getElementById('btn-menu-3');
 const btnMenu4 = document.getElementById('btn-menu-4');
 const btnMenu5 = document.getElementById('btn-menu-5');
+const btnMenu6 = document.getElementById('btn-menu-6');
+const btnMenu7 = document.getElementById('btn-menu-7');
 
 function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault();
@@ -29,6 +31,8 @@ btnMenu2.addEventListener('click', toggleMenu);
 btnMenu3.addEventListener('click', toggleMenu);
 btnMenu4.addEventListener('click', toggleMenu);
 btnMenu5.addEventListener('click', toggleMenu);
+btnMenu6.addEventListener('click', toggleMenu);
+btnMenu7.addEventListener('click', toggleMenu);
 
 function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault();

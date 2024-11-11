@@ -27,6 +27,8 @@
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+
 }
 
 .titulo-card {
@@ -78,7 +80,8 @@
     flex-direction: column;
     width: 100%;
     background: #ffffff;
-    height: 300px;
+    min-height: 150px;
+    max-height: 300px;
     margin-top: 30px;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -135,6 +138,11 @@
     color: #fff;    
 }
 
+.dados-grafico button.active {
+    background: #7692ff;
+    color: #fff;
+}
+
 .container-last-colaboradores header {
     width: 100%;
     background: #7692ff;
@@ -156,6 +164,7 @@
     width: 100%;
     height: 100%;
     overflow-x: auto;
+    overflow-y: auto;
 }
 
 .container-last-colaboradores .table .table-head {
