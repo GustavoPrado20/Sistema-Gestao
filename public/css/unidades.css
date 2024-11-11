@@ -58,7 +58,7 @@
     display: grid;
     width: 100%;
     background: #F5F6FA;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -121,7 +121,7 @@
     display: grid;
     width: 100%;
     background: #fff;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     justify-items: center;
@@ -217,19 +217,30 @@
     font-weight: bold;
 }
 
-.modal-add-membro form input {
+.modal-add-membro form input, .modal-add-membro form select {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     box-sizing: border-box;
     border: none;
     border-bottom: 2px solid #000;
+    background: none;
 }
 
-.modal-add-membro form input:focus {
+.modal-add-membro form input:focus, .modal-add-membro form select:focus {
     outline: none;
     border-bottom: 3px solid #7692ff;
 }
+
+.modal-add-membro form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.modal-add-membro form input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+ 
+ }
 
 .modal-add-membro form input[type="submit"] {
     background-color: #1b2cc1;
@@ -383,9 +394,6 @@
 
     .table-body {
         height: 65px;
-    }
-
-    .table-body {
         font-size: .5rem;
     }
 

@@ -1,7 +1,8 @@
 @extends('layouts.esqueleto')
 
-@section('styles')
+@section('stylesAndScripts')
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
 @endsection
 
