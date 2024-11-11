@@ -1,23 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers;
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::get('/', [Controllers\DashBoard::class, 'index'])->name('index');
 
-Route::get('/GE', function () {
-    return view('gruposEconomicos');
-})->name('gruposEconomicos');
+Route::get('/GruposEconomicos', [Controllers\GrupoEconomico::class, 'index'])->name('gruposEconomicos');
 
-Route::get('/BA', function () {
-    return view('bandeiras');
-})->name('bandeiras');
+Route::get('/Bandeiras', [Controllers\Bandeira::class, 'index'])->name('bandeiras');
 
-Route::get('/UN', function () {
-    return view('unidades');
-})->name('unidades');
+Route::get('/Unidades', [Controllers\Unidade::class, 'index'])->name('unidades');
 
-Route::get('/CO', function () {
-    return view('colaboradores');
-})->name('colaboradores');
+Route::get('/Colaboradores', [Controllers\Colaborador::class, 'index'])->name('colaboradores');

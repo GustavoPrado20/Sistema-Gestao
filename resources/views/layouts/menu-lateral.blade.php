@@ -5,35 +5,35 @@
 
     <ul id="menu" rule = "Menu">
         <li class="list active" id="btn-menu-1">
-            <a href="#">
+            <a href="{{ route('index') }}">
                 <span class="icon"><ion-icon name="stats-chart-outline"></ion-icon></span>
                 <span class="list">Dashboard</span>
             </a>
         </li>
 
         <li class="list" id="btn-menu-2">
-            <a href="#">
+            <a href="{{ route('gruposEconomicos') }}">
                 <span class="icon"><ion-icon name="layers-outline"></ion-icon></span>
                 <span class="list">Grupos Economicos</span>
             </a>
         </li>
 
         <li class="list" id="btn-menu-3">
-            <a href="#">
+            <a href="{{ route('bandeiras') }}">
                 <span class="icon"><ion-icon name="flag-outline"></ion-icon></span>
                 <span class="list">Bandeiras</span>
             </a>
         </li>
 
         <li class="list" id="btn-menu-4">
-            <a href="#">
+            <a href="{{ route('unidades') }}">
                 <span class="icon"><ion-icon name="business-outline"></ion-icon></span> 
                 <span class="list">Unidades</span>
             </a>
         </li>
 
         <li class="list" id="btn-menu-5">
-            <a href="#">
+            <a href="{{ route('colaboradores') }}">
                 <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
                 <span class="list">Colaboradores</span>
             </a>
