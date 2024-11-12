@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GrupoEconomico;
 use Illuminate\Http\Request;
 
-class GrupoEconomico extends Controller
+class GrupoEconomicoController extends Controller
 {
     public function index(){
         return view('gruposEconomicos');
-    }
+    }  
+
+
 }

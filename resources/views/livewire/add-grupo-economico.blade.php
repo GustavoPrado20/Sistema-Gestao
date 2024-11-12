@@ -10,10 +10,13 @@
                 </header>
                 
 
-                <form action="" method="POST">
+                <form wire:submit.prevent="store" method="POST">
                     @csrf
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name ="nome" placeholder="Ex. Grupo Economico X" autocomplete="off" required>
+                    <input type="text" wire:model.defer="nome" id="nome" name ="nome" placeholder="Ex. Grupo Economico X" autocomplete="off">
+                    @error('nome')
+                        <p style="color: #cf0303">{{ $message }}</p>
+                    @enderror
 
                     <input type="submit" name="adicionar" value="ADICIONAR">
                 </form>

@@ -3,12 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 
-Route::get('/', [Controllers\DashBoard::class, 'index'])->name('index');
+Route::get('/', [Controllers\DashboardController::class, 'index'])->name('index');
 
-Route::get('/GruposEconomicos', [Controllers\GrupoEconomico::class, 'index'])->name('gruposEconomicos');
+Route::get('/GruposEconomicos', [Controllers\GrupoEconomicoController::class, 'index'])->name('gruposEconomicos');
+// Route::prefix('/GruposEconomicos')->group(function(){
+    
+// });
 
-Route::get('/Bandeiras', [Controllers\Bandeira::class, 'index'])->name('bandeiras');
+Route::get('/Bandeiras', [Controllers\BandeiraController::class, 'index'])->name('bandeiras');
 
-Route::get('/Unidades', [Controllers\Unidade::class, 'index'])->name('unidades');
+Route::get('/Unidades', [Controllers\UnidadeController::class, 'index'])->name('unidades');
 
-Route::get('/Colaboradores', [Controllers\Colaborador::class, 'index'])->name('colaboradores');
+Route::get('/Colaboradores', [Controllers\ColaboradorController::class, 'index'])->name('colaboradores');

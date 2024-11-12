@@ -2,30 +2,34 @@
 
 namespace App\Livewire;
 
+use App\Models\Bandeira;
 use Livewire\Component;
 
 class Bandeiras extends Component
 {
-    public $showModalEditBandeira = false;
-    public $showModalRemoveBandeira = false;
+    public $search;
+    public $gruposEconomicos;
 
-    public function openEditBandeira(){
-        $this->showModalEditBandeira = true;
-    }
-
-    public function closeEditBandeira(){
-        return redirect()->route('bandeiras');
-    }
-
-    public function openRemoveBandeira(){
-        $this->showModalRemoveBandeira = true;
-    }
-
-    public function closeRemoveBandeira(){
-        return redirect()->route('bandeiras');
-    }
     public function render()
     {
-        return view('livewire.bandeiras');
+        $query = Bandeira::with(['grupoEconomico', 'unidades', 'unidades.colaboradores']);
+
+        if (!empty($this->search)) {
+            $query->where('nome', 'LIKE', '%' . $this->search . '%');
+        }
+
+        $dataBandeiras = $query->paginate(4);
+
+        $dataBandeiras->getCollection()->transform(function ($bandeira) {
+            return [
+                'id' => $bandeira->id,
+                'nome' => $bandeira->nome,
+                'grupoEconomico' => $bandeira->grupoEconomico->nome,
+                'unidades' => $bandeira->unidades->count(),
+                'colaboradores' => $bandeira->unidades->sum(fn($unidade) => $unidade->colaboradores->count())
+            ];
+        });
+
+        return view('livewire.bandeiras', ['dataBandeiras' => $dataBandeiras]);
     }
 }

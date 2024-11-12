@@ -301,7 +301,7 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    body {
+    #body {
         overflow: hidden;
     }
 
@@ -336,7 +336,7 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    body{
+    #body{
         overflow: hidden;
     }
 

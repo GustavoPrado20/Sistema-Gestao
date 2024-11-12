@@ -16,10 +16,14 @@ class Unidade extends Model
     ];
 
     public function bandeira(){
-        return $this->belongsTo(Bandeira::class);
+        return $this->belongsTo(Bandeira::class, 'id_bandeira');
     }
 
-    public function colaborador(){
-        return $this->hasMany(Colaborador::class);
+    public function colaboradores(){
+        return $this->hasMany(Colaborador::class, 'id_unidade');
+    }
+
+    public static function findById($id){
+        return self::query()->where('id', '=', $id)->first();
     }
 }

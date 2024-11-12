@@ -14,6 +14,10 @@ class GrupoEconomico extends Model
 
     public function bandeiras()
     {
-        return $this->hasMany(bandeira::class);
+        return $this->hasMany(Bandeira::class, 'id_grupo_economico');
+    }
+
+    public static function findById($id){
+        return self::query()->where('id', '=', $id)->first();
     }
 }

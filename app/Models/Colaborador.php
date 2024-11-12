@@ -16,6 +16,10 @@ class Colaborador extends Model
     ];
 
     public function unidade(){
-        return $this->belongsTo(Unidade::class);
+        return $this->belongsTo(Unidade::class, 'id_unidade');
+    }
+
+    public static function findById($id){
+        return self::query()->where('id', '=', $id)->first();
     }
 }

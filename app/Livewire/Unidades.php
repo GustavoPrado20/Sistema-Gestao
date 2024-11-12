@@ -2,31 +2,35 @@
 
 namespace App\Livewire;
 
+use App\Models\Unidade;
 use Livewire\Component;
 
 class Unidades extends Component
 {
-    public $showModalEditUnidade = false;
-    public $showModalRemoveUnidade = false;
-
-    public function openEditUnidade(){
-        $this->showModalEditUnidade = true;
-    }
-
-    public function openRemoveUnidade(){
-        $this->showModalRemoveUnidade = true;
-    }
-
-    public function closeEditUnidade(){
-        return redirect()->route('unidades');
-    }
-
-    public function closeRemoveUnidade(){
-        return redirect()->route('unidades');
-    }
-
+    public $bandeiras;
+    public $search;
+    
     public function render()
     {
-        return view('livewire.unidades');
+        $query = Unidade::with(['colaboradores', 'bandeira']);
+
+        if (!empty($this->search)) {
+            $query->where('nome', 'LIKE', '%' . $this->search . '%');
+        }
+
+        $dataUnidades = $query->paginate(4);
+
+        $dataUnidades->getCollection()->transform(function ($unidade) {
+            return [
+                'id' => $unidade->id,
+                'nomeFantasia' => $unidade->nome_fantasia,
+                'razaoSocial' => $unidade->razao_social,
+                'cnpj' => $unidade->cnpj,
+                'bandeira' => $unidade->bandeira->nome,
+                'colaboradores' => $unidade->colaboradores->count()
+            ];
+        });
+
+        return view('livewire.unidades', ['dataUnidades' => $dataUnidades]);
     }
 }

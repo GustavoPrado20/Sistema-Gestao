@@ -10,21 +10,36 @@
                 </header>
                 
 
-                <form action="" method="POST">
+                <form wire:submit.prevent="store" method="POST">
                     @csrf
                     <label for="nomeFantasia">Nome Fantasia:</label>
-                    <input type="text" id="nomeFantasia" name ="nomeFantasia" placeholder="Ex. Unidade X" autocomplete="off" required>
+                    <input type="text" id="nomeFantasia" wire:model.defer="nomeFantasia" name ="nomeFantasia" placeholder="Ex. Unidade X" autocomplete="off">
+                    @error('nomeFantasia')
+                        <p style="color: #cf0303">{{ $message }}</p>
+                    @enderror
 
                     <label for="razaoSocial">Razão Social:</label>
-                    <input type="text" id="razaoSocial" name ="razaoSocial" placeholder="Ex. Razão Social" autocomplete="off" required>
+                    <input type="text" id="razaoSocial"  wire:model.defer="razaoSocial" name ="razaoSocial" placeholder="Ex. Razão Social" autocomplete="off">
+                    @error('razaoSocial')
+                        <p style="color: #cf0303">{{ $message }}</p>
+                    @enderror
 
                     <label for="cnpj">CNPJ:</label>
-                    <input type="number" id="cnpj" name="cnpj" placeholder="Ex. 12340197000197" autocomplete="off" required>
+                    <input type="number" id="cnpj" wire:model.defer="cnpj" name="cnpj" placeholder="Ex. 12340197000197" autocomplete="off">
+                    @error('cnpj')
+                        <p style="color: #cf0303">{{ $message }}</p>
+                    @enderror
 
-                    <label for="bandeira">Bandeira:</label>
-                    <select name="bandeira" id="bandeira">
-                        <option value="">Bandeira</option>
+                    <label for="idBandeira">Bandeira:</label>
+                    <select name="idBandeira" wire:model.defer="idBandeira" id="idBandeira">
+                        <option value=""></option>
+                        @foreach ($bandeiras as $bandeira)
+                            <option value="{{ $bandeira['id'] }}">{{ $bandeira['nome'] }}</option>    
+                        @endforeach
                     </select>
+                    @error('idBandeira')
+                        <p style="color: #cf0303">{{ $message }}</p>
+                    @enderror
 
                     <input type="submit" name="adicionar" value="ADICIONAR">
                 </form>

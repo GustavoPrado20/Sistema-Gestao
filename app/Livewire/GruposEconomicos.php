@@ -2,31 +2,39 @@
 
 namespace App\Livewire;
 
+use App\Models\GrupoEconomico;
 use Livewire\Component;
+use phpDocumentor\Reflection\Types\Void_;
 
 class GruposEconomicos extends Component
 {
-    public $showModalEditGrupoEconomico = false;
-    public $showModalRemoveGrupoEconomico = false;
-
-    public function openEditGrupoEconomico(){
-        $this->showModalEditGrupoEconomico = true;
-    }
-
-    public function closeEditGrupoEconomico(){
-        return redirect()->route('index');
-    }
-
-    public function openRemoveGrupoEconomico(){
-        $this->showModalRemoveGrupoEconomico = true;
-    }
-
-    public function closeRemoveGrupoEconomico(){
-        return redirect()->route('index');
-    }
+    public $search;
 
     public function render()
     {
-        return view('livewire.grupos-economicos');
+
+        $query = GrupoEconomico::with(['bandeiras', 'bandeiras.unidades', 'bandeiras.unidades.colaboradores']);
+
+        if (!empty($this->search)) {
+            $query->where('nome', 'LIKE', '%' . $this->search . '%');
+        }
+
+        $colaboradoresPorGrupo = $query->paginate(4);
+
+        $colaboradoresPorGrupo->getCollection()->transform(function ($grupo) {
+            return [
+                'id' => $grupo->id,
+                'nome' => $grupo->nome,
+                'bandeiras' => $grupo->bandeiras->count(),
+                'unidades' => $grupo->bandeiras->sum(fn($bandeira) => $bandeira->unidades->count()),
+                'colaboradores' => $grupo->bandeiras->sum(
+                    fn($bandeira) => $bandeira->unidades->sum(
+                        fn($unidade) => $unidade->colaboradores->count()
+                    )
+                )
+            ];
+        });
+        
+        return view('livewire.grupos-economicos', ['dataGruposEconomicos' => $colaboradoresPorGrupo]);
     }
 }
