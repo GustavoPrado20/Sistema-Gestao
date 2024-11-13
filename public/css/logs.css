@@ -69,3 +69,31 @@
 .container-last-colaboradores .table .table-body .grid-colaborador:hover {
     background: #7691ff3b;
 }
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+    #body {
+        overflow: hidden;
+    }
+
+    main {
+        overflow: auto;
+    }
+
+    .container-last-colaboradores .table .table-body .grid-colaborador {
+       font-size: .8rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        width: 100vw;
+    }
+
+    .container-last-colaboradores header h2 {
+        font-size: 1rem;
+    }
+
+    .container-last-colaboradores .grid-colaborador {
+        font-size: .5rem;
+    }
+}
