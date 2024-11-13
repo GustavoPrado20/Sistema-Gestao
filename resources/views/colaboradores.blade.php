@@ -13,10 +13,10 @@
                     <h1>COLABORADORES</h1>
                 </section>
 
-                @livewire('AddColaborador')
+                @livewire('AddColaborador', ['unidades' => $unidades, 'loginAuth' => $loginAuth])
             </section>
         </header>
 
-        @livewire('Colaboradores')
+        @livewire('Colaboradores', ['unidades' => $unidades, 'loginAuth' => $loginAuth])
     </main>
 @endsection

@@ -10,11 +10,12 @@
         <title>Gestão</title>
         
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-        
+
         @yield('stylesAndScripts')
+        @livewireStyles
     </head>
 
-    <body>
+    <body id="body">
         @include('layouts.menu-lateral')
 
         @yield('conteudo')
@@ -24,5 +25,7 @@
         <script src="{{ asset('js/menu-lateral.js') }}"></script>
 
         @yield('scripts')
+        @livewireScripts
+
     </body>
 </html>

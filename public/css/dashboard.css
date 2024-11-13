@@ -1,3 +1,7 @@
+header {
+    justify-content: space-between;
+}
+
 .titulo {
     display: flex;
     justify-items: center;
@@ -6,6 +10,38 @@
 
 .titulo h1, .titulo span {
     font-size: 2rem;
+}
+
+.btn-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    color: #7692ff;
+    background: none;
+    border: 2px solid #7692ff;
+    border-radius: 20px;
+    padding: 18px 36px;
+    display: inline-block;
+    font-size: .9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #7692ff;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+}
+
+.btn ion-icon {
+    font-size: 1rem;
+}
+
+.btn-animation:hover {
+    box-shadow: inset 0 0 0 50px #7692ff;
+    color: #fff;
 }
 
 .container-card {
@@ -64,8 +100,7 @@
 }
 
 .container-graficos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     padding: 10px;
     width: 100%;
     background: #ffffff;
@@ -93,6 +128,14 @@
     width: 100%;
     height: 100%;
     padding: 15px;
+}
+
+.grid-grafico {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
 }
 
 .titulo-grafico {
@@ -204,7 +247,7 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
-    body {
+    #body {
         overflow: hidden;
     }
 

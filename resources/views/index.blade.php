@@ -14,6 +14,12 @@
         <span><ion-icon name="stats-chart"></ion-icon></span>
         <h1>DASHBOARD</h1>
       </section>
+
+      <section class="btn-header">
+        @if ($loginAuth)
+          <button class="btn btn-animation"><ion-icon name="cloud-upload"></ion-icon> Gerar PDF</button>
+        @endif
+      </section>
     </header>
 
     <section class="container-card">
@@ -24,7 +30,7 @@
         </section>
 
         <section class="dados-card">
-          <p>375</p>
+          <p>{{ $totalGruposEconomicos }}</p>
         </section>
       </a>
 
@@ -35,7 +41,7 @@
           </section>
 
           <section class="dados-card">
-            <p>375</p>
+            <p>{{ $totalBandeiras }}</p>
           </section>
         </a>
 
@@ -46,7 +52,7 @@
           </section>
 
           <section class="dados-card">
-            <p>375</p>
+            <p>{{ $totalUnidades }}</p>
           </section>
         </a>
 
@@ -57,12 +63,76 @@
           </section>
 
           <section class="dados-card">
-            <p>375</p>
+            <p>{{ $totalColaboradores }}</p>
           </section>
         </a>
       </section>
 
-      @livewire('Dashboard')
+      <section class="container-graficos">
+        <section class="grid-grafico">
+          <canvas id="GruposEconomicosXColaboradores"></canvas>
+
+          <script>
+            const ctx = document.getElementById('GruposEconomicosXColaboradores');
+        
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: [
+                  @foreach($colaboradoresPorGrupo as $colaboradorGrupo)
+                    "{{ $colaboradorGrupo['nome'] }}",
+                  @endforeach
+                ],
+                datasets: [{
+                  label: 'Colaboradores',
+                  data: [
+                    @foreach($colaboradoresPorGrupo as $colaboradorGrupo)
+                      {{ $colaboradorGrupo['colaboradores'] }},
+                    @endforeach
+                  ],
+                  backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(201, 203, 207, 0.2)'
+                  ],
+                  borderColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(255, 159, 64)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)',
+                    'rgb(54, 162, 235)',
+                    'rgb(153, 102, 255)',
+                    'rgb(201, 203, 207)'
+                  ],
+                  borderWidth: 1
+                }],
+                
+              },
+              options: {
+                plugins: {
+                  title: {
+                    display: true, 
+                    text: 'Grupos Econômicos X Colaboradores',
+                    font: {
+                      size: 24
+                    },
+                    color: '#000'
+                  }
+                },
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                },
+              }
+            });
+          </script>
+        </section>
+    </section>
 
     <section class="container-last-colaboradores">
       <header>
@@ -77,12 +147,15 @@
           <h4>Data Adição</h4>
         </section>
 
-        <section class="grid-colaborador">
-          <p>Gustavo Prado</p>
-          <p>gustavo.henrique.igt@gmail.com</p>
-          <p>Unidade X</p>
-          <p>20/08/2003</p>
-        </section>
+        @foreach ($ultimosColaboradores as $ultimoColaborador)
+          <section class="grid-colaborador">
+            <p>{{ $ultimoColaborador['nome'] }}</p>
+            <p>{{ $ultimoColaborador['email'] }}</p>
+            <p>{{ $ultimoColaborador->unidade->nome_fantasia }}</p>
+            <p>{{ $ultimoColaborador['created_at'] }}</p>
+          </section>
+        @endforeach
+        
       </section>
     </section>
   </main>
