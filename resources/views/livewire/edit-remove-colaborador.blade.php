@@ -55,6 +55,7 @@
             <section class="modal-remover-membro modal">
                 <header class="header-modal header-modal-remover">
                     <h2>Remover Colaborador</h2>
+                    
                 </header>
                 
                 <section class="container-1-modal-remover">

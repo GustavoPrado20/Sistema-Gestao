@@ -16,3 +16,5 @@ Route::get('/Bandeiras', [Controllers\BandeiraController::class, 'index'])->name
 Route::get('/Unidades', [Controllers\UnidadeController::class, 'index'])->name('unidades');
 
 Route::get('/Colaboradores', [Controllers\ColaboradorController::class, 'index'])->name('colaboradores');
+
+Route::get('/Logs', [Controllers\AuditLogController::class, 'index'])->name('logs');

@@ -40,8 +40,8 @@
         </li>
 
         @if ($loginAuth)
-            <li class="list" id="btn-menu-6">
-                <a href="#">
+            <li class="list @if($active_menu == "LG") active @endif" id="btn-menu-6">
+                <a href="{{ route('logs') }}">
                     <span class="icon"><ion-icon name="ellipsis-horizontal-outline"></ion-icon></span>
                     <span class="list">Logs</span>
                 </a>

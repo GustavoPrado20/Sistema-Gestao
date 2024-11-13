@@ -44,6 +44,10 @@ class EditRemoveColaborador extends Component
         ];
     }
 
+    public function closeModalRelatorio(){
+        return redirect()->route('colaboradores');
+    }
+
     public function openEditColaborador(){
         $this->showModalEditColaborador = true;
         $this->dataColaborador = Colaborador::findById(intval($this->idColaborador));
@@ -77,7 +81,7 @@ class EditRemoveColaborador extends Component
     }
 
     public function render()
-    {
+    { 
         return view('livewire.edit-remove-colaborador');
     }
 }
