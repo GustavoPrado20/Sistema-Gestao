@@ -8,6 +8,8 @@ use Livewire\Component;
 class AddBandeira extends Component
 {
     public $showModalAddBandeira = false;
+
+    public $loginAuth;
     
     public $nome;
     public $idGrupoEconomico;

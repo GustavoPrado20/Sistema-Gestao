@@ -1,5 +1,7 @@
 <section class="btn-header">
+    @if ($loginAuth)
     <button class="btn btn-animation" wire:click = "openAddColaborador"><ion-icon name="person-add"></ion-icon> Adicionar</button>
+    @endif
     
     @if($showModalAddColaborador)
         <section class="modal-fade">

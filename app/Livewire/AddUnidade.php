@@ -9,6 +9,8 @@ class AddUnidade extends Component
 {
     public $showModalAddUnidade = false;
 
+    public $loginAuth;
+
     public $nomeFantasia;
     public $razaoSocial;
     public $cnpj;
@@ -19,7 +21,7 @@ class AddUnidade extends Component
     protected $rules = [
         'nomeFantasia' => 'required|min:3',
         'razaoSocial' => 'required|min:5',
-        'cnpj' => 'required|min:14|max:14',
+        'cnpj' => 'required|min:14|max:14|unique:unidades,cnpj',
         'idBandeira' => 'required'
     ];
 
@@ -34,6 +36,7 @@ class AddUnidade extends Component
             'cnpj.required' => 'O CNPJ é obrigatório!',
             'cnpj.min' => 'O CNPJ é Invalido.',
             'cnpj.max' => 'O CNPJ é Invalido.',
+            'cnpj.unique' => 'Este CNPJ ja está em uso!',
 
             'idBandeira.required' => 'Bandeira é obrigatório!'
         ];

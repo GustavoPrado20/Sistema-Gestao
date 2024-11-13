@@ -1,5 +1,7 @@
 <section class="btn-header">
-    <button class="btn btn-animation" wire:click = "openAddUnidade"><ion-icon name="business"></ion-icon> Adicionar</button>
+    @if ($loginAuth)
+        <button class="btn btn-animation" wire:click = "openAddUnidade"><ion-icon name="business"></ion-icon> Adicionar</button>
+    @endif
     
     @if($showModalAddUnidade)
         <section class="modal-fade">

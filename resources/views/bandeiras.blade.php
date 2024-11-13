@@ -13,10 +13,10 @@
                     <h1>BANDEIRAS</h1>
                 </section>
 
-                @livewire('AddBandeira', ['gruposEconomicos' => $gruposEconomicos])
+                @livewire('AddBandeira', ['gruposEconomicos' => $gruposEconomicos, 'loginAuth' => $loginAuth])
             </section>
         </header>
 
-        @livewire('Bandeiras', ['gruposEconomicos' => $gruposEconomicos])
+        @livewire('Bandeiras', ['gruposEconomicos' => $gruposEconomicos, 'loginAuth' => $loginAuth])
     </main>
 @endsection

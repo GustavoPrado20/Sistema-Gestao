@@ -9,6 +9,7 @@ class Bandeiras extends Component
 {
     public $search;
     public $gruposEconomicos;
+    public $loginAuth;
 
     public function render()
     {

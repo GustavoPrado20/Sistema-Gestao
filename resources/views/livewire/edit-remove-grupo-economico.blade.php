@@ -1,6 +1,9 @@
 <section class="container-edit">
-    <button class="btn-remove-edit" wire:click ="openEditGrupoEconomico"><ion-icon name="create"></ion-icon></button>
-    <button class="btn-remove-edit" wire:click = "openRemoveGrupoEconomico"><ion-icon name="remove-circle"></ion-icon></button>
+    @if ($loginAuth)
+        <button class="btn-remove-edit" wire:click ="openEditGrupoEconomico"><ion-icon name="create"></ion-icon></button>
+        <button class="btn-remove-edit" wire:click = "openRemoveGrupoEconomico"><ion-icon name="remove-circle"></ion-icon></button>
+    @endif
+
 
     @if ($showModalEditGrupoEconomico)
         <section class="modal-fade">

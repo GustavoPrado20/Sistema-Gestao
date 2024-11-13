@@ -20,6 +20,8 @@ class EditRemoveUnidade extends Component
 
     public $dataUnidade;
 
+    public $loginAuth;
+
     protected $rules = [
         'nomeFantasia' => 'required|min:3',
         'razaoSocial' => 'required|min:5',

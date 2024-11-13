@@ -13,10 +13,10 @@
                     <h1>GRUPOS ECONÔMICOS</h1>
                 </section>
 
-                @livewire('AddGrupoEconomico')
+                @livewire('AddGrupoEconomico', ['loginAuth' => $loginAuth])
             </section>
         </header>
 
-        @livewire('GruposEconomicos')
+        @livewire('GruposEconomicos', ['loginAuth' => $loginAuth])
     </main>
 @endsection

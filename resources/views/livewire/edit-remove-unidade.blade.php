@@ -1,7 +1,9 @@
 <section class="container-edit">
-    <button class="btn-remove-edit" wire:click ="openEditUnidade"><ion-icon name="create"></ion-icon></button>
-    <button class="btn-remove-edit" wire:click = "openRemoveUnidade"><ion-icon name="remove-circle"></ion-icon></button>
-
+    @if ($loginAuth)
+        <button class="btn-remove-edit" wire:click ="openEditUnidade"><ion-icon name="create"></ion-icon></button>
+        <button class="btn-remove-edit" wire:click = "openRemoveUnidade"><ion-icon name="remove-circle"></ion-icon></button>
+    @endif
+    
     @if ($showModalEditUnidade)
         <section class="modal-fade">
             <section class="modal-add-membro modal">

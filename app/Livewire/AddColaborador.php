@@ -8,6 +8,7 @@ use Livewire\Component;
 class AddColaborador extends Component
 {
     public $showModalAddColaborador = false;
+    public $loginAuth;
 
     public $nome;
     public $email;
@@ -18,8 +19,8 @@ class AddColaborador extends Component
 
     protected $rules = [
         'nome' => 'required|min:3',
-        'email' => 'required|email',
-        'cpf' => 'required|min:11|max:11',
+        'email' => 'required|email|unique:colaboradores,email',
+        'cpf' => 'required|min:11|max:11|unique:colaboradores,cpf',
         'idUnidade' => 'required'
     ];
 
@@ -30,10 +31,12 @@ class AddColaborador extends Component
 
             'email.required' => 'A email do colaborador é obrigatório.',
             'email.email' => 'O email deve ser Válido!',
+            'email.unique' => 'Este email já está em uso!',
 
             'cpf.required' => 'O CPF é obrigatório!',
             'cpf.min' => 'O CPF é Invalido.',
             'cpf.max' => 'O CPF é Invalido.',
+            'cpf.unique' => 'Este CPF ja está em uso!',
 
             'idUnidade.required' => 'Unidade é obrigatório!'
         ];

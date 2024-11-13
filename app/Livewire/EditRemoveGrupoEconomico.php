@@ -15,6 +15,8 @@ class EditRemoveGrupoEconomico extends Component
     public $id_grupo_economico;
     public $data_grupo_economico;
 
+    public $loginAuth;
+
     protected $rules = [
         'nome' => 'required|min:2'
     ];

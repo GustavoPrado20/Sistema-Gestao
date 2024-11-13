@@ -13,10 +13,10 @@
                     <h1>UNIDADES</h1>
                 </section>
 
-                @livewire('AddUnidade',  ['bandeiras' => $bandeiras])
+                @livewire('AddUnidade',  ['bandeiras' => $bandeiras, 'loginAuth' => $loginAuth])
             </section>
         </header>
 
-        @livewire('Unidades', ['bandeiras' => $bandeiras])
+        @livewire('Unidades', ['bandeiras' => $bandeiras, 'loginAuth' => $loginAuth])
     </main>
 @endsection

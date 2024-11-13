@@ -10,6 +10,7 @@ class EditRemoveBandeira extends Component
     public $showModalEditBandeira = false;
     public $showModalRemoveBandeira = false;
     public $gruposEconomicos;
+    public $loginAuth;
 
     public $id_bandeira;
 

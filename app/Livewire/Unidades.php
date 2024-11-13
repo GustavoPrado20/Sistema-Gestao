@@ -9,6 +9,8 @@ class Unidades extends Component
 {
     public $bandeiras;
     public $search;
+
+    public $loginAuth;
     
     public function render()
     {

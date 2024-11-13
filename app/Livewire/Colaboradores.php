@@ -9,6 +9,7 @@ class Colaboradores extends Component
 {
     public $search;
     public $unidades;
+    public $loginAuth;
 
     public function render()
     {

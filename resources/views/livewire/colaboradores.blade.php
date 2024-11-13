@@ -18,7 +18,7 @@
                 <p>{{ $dataColaborador['cpf'] }}</p>
                 <p>{{ $dataColaborador['unidade'] }}</p>
                 <section class="container-end">   
-                    @livewire('EditRemoveColaborador', ['idColaborador' => $dataColaborador['id'], 'unidades' => $unidades])
+                    @livewire('EditRemoveColaborador', ['idColaborador' => $dataColaborador['id'], 'unidades' => $unidades, 'loginAuth' => $loginAuth])
                 </section>
             </section>
         @endforeach

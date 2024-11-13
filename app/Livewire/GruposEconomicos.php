@@ -10,6 +10,8 @@ class GruposEconomicos extends Component
 {
     public $search;
 
+    public $loginAuth;
+
     public function render()
     {
 

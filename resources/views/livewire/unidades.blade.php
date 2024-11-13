@@ -7,7 +7,7 @@
         <h3>Colaboradores</h3>
         <form action="">
             <ion-icon name="search"></ion-icon>
-            <input type="text" placeholder="Procurar">
+            <input type="text" wire:model.live ="search" placeholder="Procurar">
         </form>
     </section>
 
@@ -20,7 +20,7 @@
                 <p>{{ $dataUnidade['bandeira'] }}</p>
                 <p>{{ $dataUnidade['colaboradores'] }}</p>
                 <section class="container-end">   
-                    @livewire('EditRemoveUnidade', ['bandeiras' => $bandeiras, 'id_unidade' => $dataUnidade['id']])
+                    @livewire('EditRemoveUnidade', ['bandeiras' => $bandeiras, 'id_unidade' => $dataUnidade['id'], 'loginAuth' => $loginAuth])
                 </section>
             </section> 
         @endforeach

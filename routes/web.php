@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 
 Route::get('/', [Controllers\DashboardController::class, 'index'])->name('index');
+Route::get('/sair', [Controllers\DashboardController::class, 'sair'])->name('sair');
 
 Route::get('/GruposEconomicos', [Controllers\GrupoEconomicoController::class, 'index'])->name('gruposEconomicos');
 // Route::prefix('/GruposEconomicos')->group(function(){

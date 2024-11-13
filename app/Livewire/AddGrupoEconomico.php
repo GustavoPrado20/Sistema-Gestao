@@ -10,6 +10,8 @@ class AddGrupoEconomico extends Component
     public $showModalAddGrupoEconomico = false;
     public $nome;
 
+    public $loginAuth;
+
     protected $rules = [
         'nome' => 'required|min:2'
     ];

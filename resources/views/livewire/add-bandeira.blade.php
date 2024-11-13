@@ -1,5 +1,7 @@
 <section class="btn-header">
-    <button class="btn btn-animation" wire:click = "openAddBandeira"><ion-icon name="flag"></ion-icon> Adicionar</button>
+    @if ($loginAuth)
+        <button class="btn btn-animation" wire:click = "openAddBandeira"><ion-icon name="flag"></ion-icon> Adicionar</button>   
+    @endif
     
     @if($showModalAddBandeira)
         <section class="modal-fade">

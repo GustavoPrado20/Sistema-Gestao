@@ -18,7 +18,7 @@
                 <p>{{ $dataGrupoEconomico['unidades'] }}</p>
                 <p>{{ $dataGrupoEconomico['colaboradores'] }}</p>
                 <section class="container-end">   
-                    @livewire('EditRemoveGrupoEconomico', ['id_grupo_economico' => $dataGrupoEconomico['id']])
+                    @livewire('EditRemoveGrupoEconomico', ['id_grupo_economico' => $dataGrupoEconomico['id'],'loginAuth' => $loginAuth])
                 </section>
             </section>
         @endforeach

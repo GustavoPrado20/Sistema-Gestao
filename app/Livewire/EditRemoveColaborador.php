@@ -17,6 +17,7 @@ class EditRemoveColaborador extends Component
 
     public $idColaborador;
     public $dataColaborador;
+    public $loginAuth;
 
     public $unidades;
 
